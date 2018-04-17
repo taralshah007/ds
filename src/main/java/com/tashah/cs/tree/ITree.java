@@ -8,4 +8,5 @@ public interface ITree<T extends Comparable<T>> {
 	void printInOrder();
 	void printPostOrder();
 	void printPreOrder();
+	void printPath();
 }

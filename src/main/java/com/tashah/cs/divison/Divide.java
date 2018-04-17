@@ -1,6 +1,5 @@
 package com.tashah.cs.divison;
 
-
 public class Divide {
 
 	public static int divide(int dividend, int divisor) {

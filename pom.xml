@@ -22,4 +22,14 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <repositories>
+  	<repository>
+  		<id>maven</id>
+  		<url>https://repo2.maven.org/maven2</url>
+  	</repository>
+  	<repository>
+  		<id>maven1</id>
+  		<url>https://repo1.maven.org/maven2</url>
+  	</repository>
+  </repositories>
 </project>

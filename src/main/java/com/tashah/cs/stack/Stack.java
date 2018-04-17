@@ -33,7 +33,7 @@ public class Stack<T extends Comparable<T>> implements IStack<T> {
 	
 	public T pop() {
 		if(!isEmpty()) {
-			T node = (T)(arr[pointer]);
+			T node = (T)(arr[pointer-1]);
 			pointer--;
 			return node;
 		} else {

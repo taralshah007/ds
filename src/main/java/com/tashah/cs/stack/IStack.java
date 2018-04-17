@@ -1,6 +1,5 @@
 package com.tashah.cs.stack;
 
-import com.tashah.cs.node.Node;
 
 public interface IStack<T extends Comparable<T>> {
 	

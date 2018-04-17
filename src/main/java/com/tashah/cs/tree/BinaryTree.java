@@ -1,6 +1,8 @@
 package com.tashah.cs.tree;
 
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
 
 import com.tashah.cs.node.Node;
@@ -110,4 +112,47 @@ public class BinaryTree<T extends Comparable<T>> implements ITree<T>{
 		
 	}
 
+	public void printPath() {
+		Node<T> x =root;
+		
+		HashMap<String, Node<T>> map = new HashMap<String, Node<T>>();
+		
+		getPathMap(root, map, "");
+		System.out.println(map);
+//		String key = "";
+//		Queue<Node<T>> q = new LinkedList<Node<T>>();
+//		q.add(x);
+//		while(!q.isEmpty()) {
+//			x = q.poll();
+//			if(x != null) {
+//				
+//				if(x.getLeft() != null) {
+//					key = key +"L";
+//					map.put(key, x.getLeft() );
+//					q.add(x.getLeft());
+//				} 
+//				if(x.getRight() != null) {
+//					key = key +"R";
+//					map.put(key, x.getRight() );
+//					q.add(x.getRight());
+//				}
+//			}
+//		}
+//		System.out.println(map);
+	}
+	
+	private void getPathMap(Node<T> x, Map<String, Node<T>> map,String key){
+		
+		if(x.getLeft() != null) {
+			map.put(key+"L", x.getLeft());
+			getPathMap(x.getLeft(), map, key+"L");
+		}
+		if(x.getRight() != null) {
+			map.put(key+"R", x.getRight());
+			getPathMap(x.getRight(), map, key+"R");
+		}
+		
+		
+	}
+	
 }
